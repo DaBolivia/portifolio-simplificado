@@ -40,7 +40,14 @@ body {
 	text-transform: capitalize;
 	padding: 10px 20px;
 	transition: 0.2s;
+	
+	
 }
+
+.menu li{
+	display: inline-block;
+}
+
 
 .cabecalho .menu li a:hover {
 	background-color: #1d0af7;

@@ -21,6 +21,26 @@
     .projetos .container-projetos{
         padding: 0 30px;
     }
+
+    .tech{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .list{
+        flex: 1 0 33.33%; 
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 @media(max-width:425px){
@@ -38,5 +58,25 @@
 
     .projetos {
         padding: 30px;
+    }
+
+    .tech{
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .list{
+        flex: 1 0 33.33%; 
+        padding: 10px;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
     }
 }

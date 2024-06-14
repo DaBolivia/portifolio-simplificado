@@ -1,33 +1,24 @@
-/*
-Objetivo 1- quando o usuario clicar no botão mostrar mais deve abrir os projetos que estão escondidos no html
-
-    Passo 1 - pegar o botão mostrar mais no JS pra poder verificar quando o usuario clicar em cima dele 
-
-    Passo 2 - identificar o clique no botão 
-
-    Passo 3 - adicionar a classe ativo nos projetos escondidos
-
-Objetivo 2 - esconder o botão de mostrar mais 
-
-    Passo 1 - pegar o botão e esconder ele 
-
-*/ 
-
-// Passo 1 - pegar o botão mostrar mais no JS pra poder verificar quando o usuário clicar em cima dele
 const botaoMostrarProjetos = document.querySelector('.btn-mostrar-projetos');
 const projetosInativos = document.querySelectorAll('.projeto:not(.ativo)');
 
 botaoMostrarProjetos.addEventListener('click', () => {
-    // Passo 3 - adicionar a classe "ativo" nos projetos escondidos
-    mostrarMaisProjetos();
-
-    // Objetivo 2 - esconder o botão de mostrar mais
-    // Passo 1 - pegar o botão e esconder ele
-    esconderBotao();
+    if (botaoMostrarProjetos.classList.contains('mostrando')) {
+        // Se o botão está no estado de mostrando, então vamos esconder os projetos
+        esconderProjetos();
+        botaoMostrarProjetos.classList.remove('mostrando');
+        botaoMostrarProjetos.textContent = 'Mostrar mais';
+    } else {
+        // Caso contrário, mostramos os projetos
+        mostrarMaisProjetos();
+        botaoMostrarProjetos.classList.add('mostrando');
+        botaoMostrarProjetos.textContent = 'Mostrar menos';
+    }
 });
 
-function esconderBotao() {
-    botaoMostrarProjetos.classList.add("remover");
+function esconderProjetos() {
+    projetosInativos.forEach(projetoInativo => {
+        projetoInativo.classList.remove('ativo');
+    });
 }
 
 function mostrarMaisProjetos() {

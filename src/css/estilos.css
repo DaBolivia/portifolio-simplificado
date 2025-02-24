@@ -50,10 +50,11 @@ body {
 
 
 .cabecalho .menu li a:hover {
-	background-color: #1d0af7;
-	color: #fff;
-	border-radius: 50px;
-}
+	
+		color: #1d0af7;
+		
+		}
+
 
 .home {
 	display: flex;
